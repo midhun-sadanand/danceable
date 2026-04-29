@@ -1,0 +1,13 @@
+target,model,best_alpha
+danceability,ridge,8.531678524172806
+danceability,lasso,0.0001
+energy,ridge,5.298316906283707
+energy,lasso,0.0001
+valence,ridge,22.122162910704503
+valence,lasso,0.0001
+acousticness,ridge,8.531678524172806
+acousticness,lasso,0.0001
+loudness,ridge,5.298316906283707
+loudness,lasso,0.00013433993325989
+tempo,ridge,148.73521072935117
+tempo,lasso,0.011253355826007646

@@ -1,5 +1,5 @@
 # Danceable: CPSC 381 Final Project (Spring 2026)
-* generated readme for the other group members to update and keep up with work*
+*generated readme for the other group members to update and keep up with work*
 
 
 
