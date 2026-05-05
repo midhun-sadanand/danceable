@@ -30,9 +30,11 @@ This structure follows the proposal milestones:
 - `baseline.ipynb`  
   Danceability-only baseline (`mean`) vs linear regression with CV + metrics.
 - `regularized_models.ipynb`  
-  Multi-target modeling with `Dummy`, `Linear`, `Ridge`, `Lasso`.
+  Multi-target modeling with `Dummy`, `Linear`, `Ridge`, `Lasso`. Includes per-target predicted-vs-actual scatter plots and a Lasso coefficient / feature-rank analysis.
+- `tree_models.ipynb`  
+  Tree-based extension: `RandomForestRegressor` and `XGBRegressor` for all 6 targets, with per-target scatter plots and a feature-importance heatmap (RF vs XGBoost).
 - `final.ipynb`  
-  Final comparison plots/tables and report-ready summary outputs.
+  Final comparison plots/tables and report-ready summary outputs. Auto-merges tree results when `tree_test_results.csv` exists.
 - `src/project_utils.py`  
   Shared helper functions (loading, cleaning, splitting, metrics).
 - `data/processed/`  
@@ -45,7 +47,7 @@ This structure follows the proposal milestones:
 From repo root:
 
 ```bash
-python3 -m pip install pandas numpy scikit-learn matplotlib kagglehub
+python3 -m pip install -r requirements.txt
 ```
 
 Notes:
@@ -57,7 +59,8 @@ Notes:
 1. `dataclean.ipynb`
 2. `baseline.ipynb`
 3. `regularized_models.ipynb`
-4. `final.ipynb`
+4. `tree_models.ipynb` *(optional but recommended — `final.ipynb` auto-includes its results when present)*
+5. `final.ipynb`
 
 The later notebooks expect output files created by earlier notebooks.
 
@@ -76,6 +79,10 @@ Every model comparison reports:
 - `outputs/regularized_test_results.csv`
 - `outputs/regularized_best_params.csv`
 - `outputs/best_model_by_target.csv`
+- `outputs/lasso_coefficients.csv`, `outputs/lasso_feature_rank.csv`, `outputs/lasso_*.png`
+- `outputs/scatter_predicted_vs_actual.png`
+- `outputs/tree_results.csv`, `outputs/tree_test_results.csv`, `outputs/tree_feature_importances.csv`
+- `outputs/tree_predicted_vs_actual.png`, `outputs/tree_feature_importance_heatmap.png`
 - `outputs/final/all_test_model_results.csv`
 - `outputs/final/best_model_by_target.csv`
 - `outputs/final/r2_comparison_pivot.csv`

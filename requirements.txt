@@ -1,0 +1,9 @@
+pandas>=2.3
+numpy>=2.2
+scikit-learn>=1.7
+matplotlib>=3.10
+xgboost>=3.0
+# Optional: only needed if data/ has no Spotify CSV and the notebooks need to auto-download.
+kagglehub>=0.3
+# Notebook execution (for `jupyter nbconvert --execute`).
+nbconvert>=7.17
